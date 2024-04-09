@@ -7,12 +7,6 @@ public class PlayerController : BaseController
     private float _speed = 3.0f;
     private Vector3 _moveDir;
     
-    // public Vector3 MoveDir
-    // {
-    //     get { return _moveDir; }
-    //     set { _moveDir = value; }
-    // }
-    
     public override bool Init()
     { 
         base.Init();
