@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -30,7 +31,7 @@ public class GameScene : MonoBehaviour
         _slime.transform.SetParent(_monsters.transform);
         _goblin.transform.SetParent(_monsters.transform);
         
-        _slime.AddComponent<PlayerController>();
+        // _slime.AddComponent<PlayerController>();
         
         // Managers.Instance.CallTest();
         Managers.Game.CallTest();

@@ -8,9 +8,9 @@ public class UI_JoyStick : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
 {
     [SerializeField] private Image _handleBG;
     [SerializeField] private Image _handler;
-    
-    Vector2 _firstClick = Vector3.zero;
-    Vector3 _moveDir = Vector3.zero;
+
+    private Vector2 _firstClick;
+    private Vector2 _moveDir;
     
     // TEMP
     public GameObject _player;
@@ -45,8 +45,8 @@ public class UI_JoyStick : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
         // 움직임 정지
         _moveDir = Vector3.zero;
         
-        // TEMP
-        _player.GetComponent<PlayerController>().MoveDir = _moveDir;
+        // GameManager에 플레이어 움직이는 방향 전달
+        Managers.Game.MoveDir = _moveDir;
     }
 
     // 드래그 되는 중
@@ -62,15 +62,15 @@ public class UI_JoyStick : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
         // 플레이어가 움직일 방향을 저장
         _moveDir = distance.normalized;
         
-        // TEMP
-        _player.GetComponent<PlayerController>().MoveDir = _moveDir;
+        // GameManager에 플레이어 움직이는 방향 전달
+        Managers.Game.MoveDir = _moveDir;
 
         
         // _handler.transform.position = eventData.position;
         
         
         // Debug.Log($"evenData : {eventData.position}");
-        Debug.Log($"moveDir : {_moveDir}");
+        // Debug.Log($"moveDir : {_moveDir}");
         
     }
 }
