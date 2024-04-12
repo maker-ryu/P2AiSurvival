@@ -64,13 +64,6 @@ public class UI_JoyStick : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
         
         // GameManager에 플레이어 움직이는 방향 전달
         Managers.Game.MoveDir = _moveDir;
-
-        
-        // _handler.transform.position = eventData.position;
-        
-        
-        // Debug.Log($"evenData : {eventData.position}");
-        // Debug.Log($"moveDir : {_moveDir}");
         
     }
 }

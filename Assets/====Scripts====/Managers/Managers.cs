@@ -7,10 +7,15 @@ public class Managers : MonoBehaviour
     private static Managers s_instanace;
     private static bool s_Init = false;
 
-    #region CoreManagers
+    #region Managers
 
     private GameManager _game = new GameManager();
+    private ObjectManager _object = new ObjectManager();
+    private ResourceManager _resource = new ResourceManager();
+    
     public static GameManager Game { get { return Instance._game; } }
+    public static ObjectManager Object { get { return Instance._object; } }
+    public static ResourceManager Resource { get { return Instance._resource; } }
 
     #endregion
 

@@ -10,7 +10,7 @@ public class MonsterContoller : BaseController
     {
         base.Init();
         
-        Debug.Log("MonsterContoller에서 뭔가 초기화");
+        // Debug.Log("MonsterContoller에서 뭔가 초기화");
 
         return true;
     }

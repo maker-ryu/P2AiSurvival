@@ -19,6 +19,15 @@ public class GameScene : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        // StartSet();
+        // Managers.Object.Spawn();
+        // Managers.Resource.LoadPrefab();
+        Managers.Resource.LoadAllAsync();
+    }
+    
+
+    void StartSet()
+    {
         _snake = GameObject.Instantiate(_snakePrefab);
         _player = GameObject.Instantiate(_slimePrefab);
         _goblin = GameObject.Instantiate(_goblinPrefab);
@@ -39,6 +48,8 @@ public class GameScene : MonoBehaviour
         // Managers.Instance.CallTest();
         Managers.Game.CallTest();
     }
+    
+    
 
     // Update is called once per frame
     void Update()
